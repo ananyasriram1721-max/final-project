@@ -12,7 +12,6 @@ services:
         value: 3.11.0
       - key: FRONTEND_URL
         sync: false
-    plan: free
 
   # Frontend Static Site
   - type: web
@@ -28,4 +27,3 @@ services:
     envVars:
       - key: VITE_API_URL
         sync: false
-    plan: free
