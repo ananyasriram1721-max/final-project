@@ -7,12 +7,16 @@ export interface SensorData {
   id: number;
   temperature: number;
   humidity: number;
+  predicted_temperature?: number;
+  ir_detected?: boolean;
   timestamp: string;
 }
 
 export interface SensorDataCreate {
   temperature: number;
   humidity: number;
+  predicted_temperature?: number;
+  ir_detected?: boolean;
 }
 
 export async function fetchSensors(): Promise<SensorData[]> {

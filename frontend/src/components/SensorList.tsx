@@ -49,6 +49,11 @@ function SensorList({ sensors, loading, onDelete, onRefresh, newIds = new Set() 
                   <span className="sensor-value humidity-value">
                     <strong>Humidity:</strong> {sensor.humidity}%
                   </span>
+                  {sensor.ir_detected !== undefined && (
+                    <span className={`sensor-value ir-value ${sensor.ir_detected ? 'ir-alert' : ''}`}>
+                      <strong>IR:</strong> {sensor.ir_detected ? 'Detected!' : 'Clear'}
+                    </span>
+                  )}
                 </div>
                 <div className="timestamp">
                   {formatDate(sensor.timestamp)}
